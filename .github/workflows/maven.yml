@@ -30,12 +30,12 @@ jobs:
     - name: Execute Tests
       run: mvn clean test -Dsuite=testng -X
 
-    - name: Upload a Build Artifact
-      if: always()
-      uses: actions/upload-artifact@v4.5.0
-      with:
-        name: Logs
-        path: logs/
+    # - name: Upload a Build Artifact
+    #   if: always()
+    #   uses: actions/upload-artifact@v4.5.0
+    #   with:
+    #     name: Logs
+    #     path: logs/
         
     - name: Publish Test Report
       if: always()
